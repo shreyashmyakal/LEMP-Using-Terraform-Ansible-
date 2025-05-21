@@ -1,4 +1,3 @@
----
 
 ## 🚀 EC2 Provisioning and LEMP Stack Automation with Terraform + Ansible-
 
