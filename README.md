@@ -9,6 +9,25 @@ Also  to remote host
 
 ---
 
+### 🔑 **Prerequisites**
+
+Before running this project, make sure you have the following set up:
+
+  ✅ AWS Account with IAM user and key pair created
+
+  ✅ AWS CLI installed and configured (aws configure)
+
+  ✅ Terraform installed (v1.0+ recommended)
+      Install Terraform →
+
+  ✅ Ansible installed
+
+      sudo apt update && sudo apt install ansible -y
+
+  ✅ An SSH key pair (your-key.pem) added to AWS EC2 and available at ~/.ssh/your-key.pem
+
+---
+
 ### 📁 **Project Structure:**
 
 ```
@@ -31,8 +50,8 @@ terraform-ansible-lemp/
 * **Terraform** – Infrastructure as Code to provision EC2
 * **Ansible** – Configuration management for LEMP installation
 * **AWS EC2** – Cloud virtual server
-* **Ubuntu 22.04** – EC2 OS
-* **LEMP Stack** – Linux, Nginx, MySQL, PHP
+* **Ubuntu 24.04** – EC2 OS
+* **LEMP Stack** – Linux, Nginx, Mariadb-serverL, PHP
 
 ---
 
@@ -41,17 +60,20 @@ terraform-ansible-lemp/
 #### 1. Clone the Repository:
 
 ```bash
-git clone https://github.com/your-username/terraform-ansible-lemp.git
+git clone https://github.com/Swatiz-cloud/terraform-ansible-lemp.git
 cd terraform-ansible-lemp
 ```
 
 #### 2. Update Terraform Files:
 
-In `terraform/main.tf`, update:
+In `terraform/variables.tf`, update:
 
-* `ami` (based on region)
+* `region` (your applicable region)
+* `ami_id` (based on region)
+* `instance_type` (mention your required instance-type)
 * `key_name` (your EC2 key pair name)
 * Replace `your-key.pem` with the correct path to your private key
+
 
 #### 3. Make `run.sh` Executable:
 
@@ -73,11 +95,7 @@ A simple `index.html` file is included, containing cloud computing information s
 
 To host this:
 
-* Place it in `/var/www/html/` after LEMP setup:
-
-```bash
-sudo mv index.html /var/www/html/
-```
+ **Ansible will place this index.html in `/var/www/html/` after LEMP setup**
 
 * Visit the EC2 public IP to view the page.
 
@@ -85,7 +103,7 @@ sudo mv index.html /var/www/html/
 
 ### 📷 **Preview of the Web Page**
 
-![Preview](https://cdn-icons-png.flaticon.com/512/873/873120.png)
+![Preview](img/myweb.png)
 *A sample cloud info card in the index.html*
 
 ---
