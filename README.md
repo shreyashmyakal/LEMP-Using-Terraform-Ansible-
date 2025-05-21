@@ -117,6 +117,22 @@ To host this:
 
 ---
 
+### 🧹 Cleanup
+
+To avoid unnecessary AWS charges, destroy all provisioned resources:
+
+```bash
+cd terraform/
+terraform destroy -auto-approve
+```
+Also, clean up temporary files:
+
+```bash
+rm -rf terraform/.terraform terraform/terraform.tfstate*
+rm -f ansible/hosts.ini
+```
+
+
 ### 📬 **Author**
 
 **Swati Zampal**
