@@ -1,11 +1,12 @@
 ---
 
-## 🚀 EC2 Provisioning and LEMP Stack Automation with Terraform + Ansible
+## 🚀 EC2 Provisioning and LEMP Stack Automation with Terraform + Ansible-
+
+---
 
 ### 📌 **Project Goal:**
 
 Provision an EC2 instance using **Terraform**, copy the private IP to an **Ansible inventory file**, and use **Ansible** to install the **LEMP stack (Linux, Nginx, MySQL, PHP)** and copy the **index.html** on it.
-Also  to remote host
 
 ---
 
