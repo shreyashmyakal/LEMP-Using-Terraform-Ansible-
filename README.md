@@ -401,13 +401,5 @@ Also, clean up temporary files:
 ```bash
 rm -rf terraform/.terraform terraform/terraform.tfstate*
 rm -f ansible/hosts.ini
-```
-
-
-### 📬 **Author**
-
-**Swati Zampal**
-Cloud & DevOps Trainer
-[LinkedIn](https://linkedin.com/in/swati-gandamal-zampal) | [GitHub](https://github.com/Swatiz-cloud)
 
 ---
